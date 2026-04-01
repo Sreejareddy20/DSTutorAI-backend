@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is a stack?",
+    "answer": "Stack is a linear data structure that follows LIFO principle."
+  },
+  {
+    "question": "What is a queue?",
+    "answer": "Queue is a linear data structure that follows FIFO principle."
+  },
+  {
+    "question": "What is a linked list?",
+    "answer": "Linked list is a linear data structure where elements are stored in nodes connected by pointers."
+  }
+]

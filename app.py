@@ -76,7 +76,8 @@ def chat():
         if "429" in raw_error:
             answer = "I've temporarily reached my AI usage limit. Please wait about 1 minute and try again. I'll be ready to help shortly!"
         else:
-            answer = "I'm having trouble connecting to my AI brain right now. Please check your connection or try again later."
+            # Let's show a bit more detail to help your developer debug
+            answer = f"AI Brain Error: {raw_error[:100]}... Please ask your developer to check the server logs."
 
     # 2. Save everything to your database history (For the history screen)
     connection = get_connection()

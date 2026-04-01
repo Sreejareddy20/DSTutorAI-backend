@@ -289,4 +289,5 @@ def delete_account(user_id):
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # Running on port 8024 as specified by the hosting link
+    app.run(host="0.0.0.0", port=8024, debug=True)

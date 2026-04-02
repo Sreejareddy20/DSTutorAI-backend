@@ -1,6 +1,5 @@
-flask
-flask-cors
-pymysql
 python-dotenv
-scikit-learn
 google-generativeai
+Flask
+flask-cors
+mysql-connector-python

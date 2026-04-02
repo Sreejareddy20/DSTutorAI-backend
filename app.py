@@ -1,20 +1,27 @@
+import os
+from dotenv import load_dotenv
 import google.generativeai as genai
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from database import get_connection
+from datetime import datetime
 import random
 import smtplib
 from email.mime.text import MIMEText
-from datetime import datetime
+
+# Load secret Keys from .env file
+load_dotenv()
 
 app = Flask(__name__, static_folder='frontend', static_url_path='')
 CORS(app)
 
-# --- AI SETUP (GIVING YOU CHAT-GPT POWER) ---
-# Paste your DSTUTOR API Key here
-api_key = "AIzaSyAW9Q8iMoPVnTKh6HpZyAqvfv4R1rEaEF4"
-genai.configure(api_key=api_key)
-print(f"🚀 SERVER STARTING: Using API Key ending in ...{api_key[-4:]}")
+# --- AI SETUP ---
+api_key = os.getenv("GEMINI_API_KEY") # Get from .env file
+if not api_key:
+    print("❌ ERROR: GEMINI_API_KEY NOT FOUND IN .env FILE! AI features will fail.")
+else:
+    genai.configure(api_key=api_key)
+    print("🚀 SERVER STARTING: AI Configuration Successful.")
 
 # --- THE MOST STABLE SETUP ---
 model = genai.GenerativeModel(

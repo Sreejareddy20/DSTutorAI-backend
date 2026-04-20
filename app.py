@@ -37,8 +37,8 @@ model = genai.GenerativeModel(
 
 # EMAIL OTP FUNCTION
 def send_otp_email(receiver_email, otp):
-    sender_email = "dstutorai@gmail.com"
-    sender_password = "bvne dvmb nrnq yckn"
+    sender_email = "Your_Email"
+    sender_password = "Password"
     subject = "OTP Verification Code - DS Tutor AI"
     body = f"Hello,\n\nYour OTP code for DS Tutor AI is: {otp}\n\nThis code will expire shortly. If you did not request this, please ignore this email.\n\nBest regards,\nDS Tutor Team"
     

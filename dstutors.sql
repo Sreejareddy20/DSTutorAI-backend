@@ -83,9 +83,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `otp`, `verified`) VALUES
-(2, 'Finny Abraham', 'wetwheelsplus@gmail.com', 'Srihi@20', '402593', 1),
-(5, 'Sreeja', 'muramreddysreeja@gmail.com', 'Srija@20', '704676', 1);
+INSERT INTO `users` (`id`, `name`, `email`,`otp`, `verified`) VALUES
+(2, 'Finny Abraham', 'wetwheelsplus@gmail.com','402593', 1),
+(5, 'Sreeja', 'muramreddysreeja@gmail.com','704676', 1);
 
 --
 -- Indexes for dumped tables

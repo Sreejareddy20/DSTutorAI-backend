@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 # Use your API Key to check model availability
-genai.configure(api_key="AIzaSyCVxbEeVx9pniWLBzF-WVM88Ex_6uWUGfs")
+genai.configure(api_key="API_KEY")
 
 print("Checking available models for your API Key...")
 try:
